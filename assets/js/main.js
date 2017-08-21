@@ -11,7 +11,7 @@ $(document).ready(function() {
                 
         e.preventDefault();
         
-		$('body').scrollTo(target, 800, {offset: -60, 'axis':'y'});
+		$('body').scrollTo(target, 800, {offset: -60, axis:'y'});
 		
 	});
 	
@@ -34,8 +34,30 @@ $(document).ready(function() {
 
     });
     
-    new Clipboard('.copy-code');
+    new Clipboard('.clipboard-copy');
     hljs.initHighlightingOnLoad();
-    
+    $('.clipboard-copy').prop('title', 'Copy to Clipboard').tooltip();
+
+    $('.linkable').each(function() {
+        let e = $(this);
+        let eId = e.attr('id');
+        if (e.prop('tagName') == "A") {
+            e.after(
+                '<a id="' + eId + 'LinkButton" class="headerlink" style="opacity:0" href="#' + eId + '" title="Permalink to this headline">¶</a><a class="offsetAnchor" id="' + eId + '"></a>'
+            );
+        } else {
+            e.append(
+                '<a id="' + eId + 'LinkButton" class="headerlink" style="opacity:0" href="#' + eId + '" title="Permalink to this headline">¶</a><a class="offsetAnchor" id="' + eId + '"></a>'
+            );
+        }
+        e.attr('id', eId + 'Text').hover(
+            function() {  // Mouse Enter
+                $('#' + eId + 'LinkButton').css('opacity', 1);
+            },
+            function() {  // Mouse Exit
+                $('#' + eId + 'LinkButton').css('opacity', '0');
+            }
+        );
+    });
 
 });

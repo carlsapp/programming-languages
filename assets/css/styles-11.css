@@ -188,25 +188,6 @@ a.btn:hover {
   padding-bottom: 30px;
   font-size: 16px;
 }
-.header .contact-info ul {
-  margin-bottom: 0;
-}
-.header .contact-info li {
-  margin-right: 30px;
-  color: rgba(255, 255, 255, 0.8);
-}
-.header .contact-info li a {
-  color: rgba(255, 255, 255, 0.8);
-}
-.header .contact-info li a:hover {
-  color: #fff;
-}
-.header .contact-info li:last-child {
-  margin-right: 0;
-}
-.header .contact-info li .fa {
-  margin-right: 10px;
-}
 /* Page Nav */
 .page-nav-space-holder {
   height: 60px;
@@ -241,7 +222,8 @@ a.btn:hover {
   display: inline-block;
 }
 .page-nav-wrapper .page-nav li {
-  margin-right: 30px;
+  /*margin-right: 30px;*/
+  padding-right: 5px;
   display: inline-block;
   background: none;
 }
@@ -929,30 +911,49 @@ a.btn:hover {
   font-size: 1.5em;
   color: #666;
 }
-.copy-code {
+.clipboard-copy {
   cursor: pointer;
 }
 pre {
-    display: block;
-    font-family: monospace;
-    padding: unset;
-    margin: unset;
-    font-size: unset;
-    line-height: unset;
-    color: unset;
-    word-break: unset;
-    word-wrap: unset;
-    background-color: unset;
-    border: unset;
-    border-radius: 4px;
-    /*padding: 9.5px;
-    margin: 0 0 10px;
-    font-size: 13px;
-    line-height: 1.42857143;
-    color: #333;
-    word-break: break-all;
-    word-wrap: break-word;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 4px;*/
+  display: block;
+  font-family: monospace;
+  /* We have to unset a bunch of properties to remove the styling that bootstrap applies to pre blocks */
+  padding: unset;
+  margin: unset;
+  font-size: unset;
+  line-height: unset;
+  color: unset;
+  word-break: unset;
+  word-wrap: unset;
+  background-color: unset;
+  border: unset;
+  border-radius: 4px;
+}
+
+.header .lang-table {
+  background: #4b626d;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 16px;
+}
+
+a.offsetAnchor {
+  /* The offsetAnchor is used to offset an anchor link to account for the fixed top header. If we don't use this offset
+   anchor, the linked text will end up being behind the fixed top header. */
+  display: block;
+  position: relative;
+  top: -150px;
+  visibility: hidden;
+}
+
+.headerlink {
+  /* The headerlink is the paragraph symbol next to linkable headers. Start with this not displayed. It'll be displayed
+   with JavaScript when the mouse hovers over top. */
+  padding-left: 10px;
+  opacity: 0;
+}
+
+.section.lang-feature .row {
+  /* Add some padding between the code blocks */
+  padding-top: 5px;
 }

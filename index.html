@@ -28,10 +28,10 @@
 </head> 
 
 <body>
-  
-  <header class="header">    
+  <header class="header">
     <div class="intro">
-      <div class="container text-center">
+      <div class="container text-center"><a href="https://github.com/carlsapp/programming-languages" target="_blank" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
         <h1 class="name">The Programming Cheat Sheet</h1>
         <div class="title"></div>
         <div class="profile">
@@ -42,30 +42,93 @@
       </div><!--//container-->
     </div><!--//intro-->
     
-    <div class="contact-info">
+    <div class="lang-table">
       <div class="container">
         <div class="row">
           <div class="text-right col-xs-12 col-sm-4"><a class="scrollto" href="#comments-section">Comments:</a></div>
           <div class="text-left col-xs-12 col-sm-8 lang-list">
             <a class="scrollto" href="#comments-python-code">Python</a>
-            <a class="scrollto" href="#comments-c-code">C / C++</a>
-            <a href="">Javascript</a>
+            <a class="scrollto" href="#comments-c-code">C / C++ / JavaScript</a>
+            <a class="scrollto" href="#comments-bash-code" title="Coming Soon ...">Bash</a>
           </div>
         </div>
         <div class="row">
-          <div class="text-right col-xs-12 col-sm-4">Variables and Built-In Types:</div>
+          <div class="text-right col-xs-12 col-sm-4">
+            <a class="scrollto" href="#variables-section">Variables and Built-In Types:</a>
+          </div>
           <div class="text-left col-xs-12 col-sm-8 lang-list">
-            <a href="">Python</a>
-            <a href="">C / C++</a>
-            <a href="">Javascript</a>
+            <a class="scrollto" href="#variables-python-code">Python</a>
+            <a class="scrollto" href="#variables-c-code">C / C++</a>
+            <a class="scrollto" href="#variables-javascript-code">JavaScript</a>
           </div>
         </div>
         <div class="row">
-          <div class="text-right col-xs-12 col-sm-4">Classes:</div>
+          <div class="text-right col-xs-12 col-sm-4">
+            <a class="scrollto" href="#classes-section">Classes:</a>
+          </div>
           <div class="text-left col-xs-12 col-sm-8 lang-list">
-            <a href="">Python</a>
-            <a href="">C / C++</a>
-            <a href="">Javascript</a>
+            <a class="scrollto" href="#classes-python-code">Python</a>
+            <a class="scrollto" href="#classes-cpp-code">C++</a>
+            <a class="scrollto" href="#classes-javascript-code">JavaScript</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-right col-xs-12 col-sm-4">
+            <a class="scrollto" href="#functions-section">Functions:</a>
+          </div>
+          <div class="text-left col-xs-12 col-sm-8 lang-list">
+            <a class="scrollto" href="#functions-python-code">Python</a>
+            <a class="scrollto" href="#functions-c-code">C / C++</a>
+            <a class="scrollto" href="#functions-javascript-code">JavaScript</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-right col-xs-12 col-sm-4">
+            <a class="scrollto" href="#includes-section">Includes:</a>
+          </div>
+          <div class="text-left col-xs-12 col-sm-8 lang-list">
+            <a class="scrollto" href="#includes-python-code">Python</a>
+            <a class="scrollto" href="#includes-c-code">C / C++</a>
+            <a class="scrollto" href="#includes-javascript-code">JavaScript</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-right col-xs-12 col-sm-4">
+            <a class="scrollto" href="#includes-section">While Loops:</a>
+          </div>
+          <div class="text-left col-xs-12 col-sm-8 lang-list">
+            <a class="scrollto" href="#while-python-code">Python</a>
+            <a class="scrollto" href="#while-c-code">C / C++</a>
+            <a class="scrollto" href="#while-javascript-code">JavaScript</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-right col-xs-12 col-sm-4">
+            <a class="scrollto" href="#includes-section">For Loops:</a>
+          </div>
+          <div class="text-left col-xs-12 col-sm-8 lang-list">
+            <a class="scrollto" href="">Python</a>
+            <a class="scrollto" href="">C / C++</a>
+            <a class="scrollto" href="">JavaScript</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-right col-xs-12 col-sm-4">
+            <a class="scrollto" href="#includes-section">Try/Catch Exceptions:</a>
+          </div>
+          <div class="text-left col-xs-12 col-sm-8 lang-list">
+            <a class="scrollto" href="">Python</a>
+            <a class="scrollto" href="">C / C++</a>
+            <a class="scrollto" href="">JavaScript</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-right col-xs-12 col-sm-4">
+            <a class="scrollto" href="#op-overloads-section">Operator Overloads:</a>
+          </div>
+          <div class="text-left col-xs-12 col-sm-8 lang-list">
+            <a class="scrollto" href="">Python</a>
+            <a class="scrollto" href="">C / C++</a>
           </div>
         </div>
       </div><!--//container-->
@@ -77,10 +140,17 @@
           <ul id="page-nav" class="nav page-nav list-inline">
             <li><a class="scrollto" href="#comments-section">Comments</a></li>
             <li><a class="scrollto" href="#variables-section">Variables</a></li>
-            <li><a class="scrollto" href="#education-section">Classes</a></li>
-            <li><a class="scrollto" href="#skills-section">Functions</a></li>
-            <li><a class="scrollto" href="#specs-section">Includes</a></li>
-            <li><a class="scrollto" href="#op-overload-section">Operator Overload</a></li>
+            <li><a class="scrollto" href="#classes-section">Classes</a></li>
+            <li><a class="scrollto" href="#functions-section">Functions</a></li>
+            <li><a class="scrollto" href="#includes-section">Includes</a></li>
+          <!--/ul>
+        </div>
+        <div class="container">
+          <ul id="page-nav-2" class="nav page-nav list-inline"-->
+            <li><a class="scrollto" href="#for-section">For Loops</a></li>
+            <li><a class="scrollto" href="#while-section">While Loops</a></li>
+            <li><a class="scrollto" href="#exceptions-section">Exceptions</a></li>
+            <li><a class="scrollto" href="#op-overloads-section">Operator Overload</a></li>
             <li><a class="scrollto" href="#about-section">About</a></li>
           </ul><!--//page-nav-->
         </div>
@@ -91,51 +161,356 @@
   
   <div class="wrapper container">
 
-    <section id="comments-section" class="section">
-      <h2 class="section-title">Comments</h2>
-        <div class="row">
-          <div class="text-right col-xs-12 col-sm-2 lang-title">Python</div>
-          <div class="text-left col-xs-11 col-sm-9">
-            <pre><code id="comments-python-code" class="python"># In-line Comment
+    <section id="comments-section" class="section lang-feature">
+      <h2 class="section-title linkable" id="Comments">Comments</h2>
+      <div class="row python">
+        <div id="Comments-Python" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+          <a href="https://docs.python.org/3/reference/lexical_analysis.html#comments" target="_blank">Python</a>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="comments-python-code"># In-line Comment
 '''
 Python doesn't have multiline comments. Although not officially a comment. Its common practice to use a 
 triple-quote multiline string as a comment.
 '''
 """You can also use double quotes"""</code></pre>
-          </div>
-          <div class="col-xs-1 col-sm-1"><i class="fa fa-clipboard copy-code" data-clipboard-target="#comments-python-code"></i></div>
         </div>
-        <div class="row" style="padding-top: 5px">
-          <div class="text-right col-xs-12 col-sm-2 lang-title">C / C++</div>
-          <div class="text-left col-xs-11 col-sm-9" class="c">
-            <pre><code id="comments-c-code" class="c">// Single-line Comment
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#comments-python-code"></i>
+        </div>
+      </div>
+      <div class="row c cpp javascript" class="lang-example-row">
+        <div class="text-right col-xs-12 col-sm-2 lang-title">
+          <div id="Comments-C" class="linkable"><a href="http://en.cppreference.com/w/c/comment" target="_blank">C</a></div>
+          <div id="Comments-Cpp" class="linkable"><a href="http://en.cppreference.com/w/cpp/comment" target="_blank">C++</a></div>
+          <div id="Comments-JavaScript" class="linkable"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments" target="_blank">JavaScript</a></div>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="comments-c-code">// Single-line Comment
 /*
-   Multiline Comment
+ C, C++, and JavaScript have the same
+ single-line and multiline comment syntax
 */</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#comments-c-code"></i>
+        </div>
+      </div>
+    </section><!-- Comments section-->
+
+    <section id="variables-section" class="section lang-feature">
+      <h2 id="Variables" class="section-title linkable">Variables and Built-In Data Types</h2>
+        <div class="row python"><!-- Python Row -->
+          <div id="Variables-Python" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+            <a href="https://docs.python.org/3/library/stdtypes.html" target="_blank">Python</a>
           </div>
-          <div class="col-xs-1 col-sm-1"><i class="fa fa-clipboard copy-code" data-clipboard-target="#comments-c-code"></i></div>
+          <div class="text-left col-xs-11 col-sm-9">
+            <pre><code id="variables-python-code">myIntegerVar = 1234 = int('1234', base=10)  # Immutable
+myFloatVar = 1.234 = float('1.2345')  # Immutable
+myComplexVar = complex('1+3j') = complex(real=1, imag=3)  # Immutable
+myBoolVar = bool(0) = True = False  # Immutable
+myStringVar = "blah" = str('')  # Immutable
+# Sequence Types
+myListVar = [] = list(['any','iterable','type'])  # Mutable
+myTupleVar = () = tuple(['any','iterable','type'])  # Immutable
+# Set Types
+mySetVar = set(['any','iterable','type'])  # Mutable
+myFrozenSetVar = frozenset(['any','iterable','type'])  # Immutable
+# Mapping Types - Mutable
+myDictVar = {'one': 1, 'two', 2} = dict(one=1, two=2) = dict([('one', 1), ('two', 2)])</code></pre>
+          </div>
+          <div class="col-xs-1 col-sm-1"><i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#variables-python-code"></i></div>
+        </div>
+        <div class="row c cpp">
+          <div class="text-right col-xs-12 col-sm-2 lang-title">
+            <div id="Variables-C" class="linkable">
+              <a href="http://en.cppreference.com/w/c/language/arithmetic_types" target="_blank">C</a>
+            </div>
+            <div id="Variables-Cpp" class="linkable">
+              <a href="http://en.cppreference.com/w/cpp/language/types" target="_blank">C++</a>
+            </div>
+          </div>
+          <div class="text-left col-xs-11 col-sm-9">
+            <pre><code id="variables-c-code" class="c">void *pointerToNothing;  // Void can only be used for pointer and return types
+bool myBoolean = true = false;
+signed char mySignedChar;  // 8 bits
+unsigned char myUnsignedChar;  // 8 bits
+char myChar;  // 8 bits
+wchar_t myWChar;  //
+char16_t myChar16;  // 16 bits
+char32_t myChar32;  // 32 bits
+short int myShortInt;  // = short = signed short = signed short int >16 bits
+unsigned short int myUSInt;  // = unsigned short >16 bits
+int myInt;  // = signed = signed int >16 (sometimes >32) bits
+unsigned int myUnsignedInt; // = unsigned >16 (sometimes >32) bits
+long int myLInt;  // = long = signed long = signed long int >32 (sometimes >64) bits
+unsigned long int myULInt;  // = unsigned long >32 (sometimes >64) bits
+long long int myLLInt;  // = long long = signed long long = signed long long int >64 bits
+// Floating Point Types
+float myFloat;  // Single precision, 32 bits
+double myDouble;  // Double precision, 64 bits
+long double myLongDouble;  // Extended precision, 80 bits
+// Fixed width integer types: [u]int[_(fast,least)][8,16,32,64]_t</code></pre>
+          </div>
+          <div class="col-xs-1 col-sm-1"><i class="fa fa-clipboard clipboard-copy"></i></div>
+        </div>
+        <div class="row javascript">
+          <div class="text-right col-xs-12 col-sm-2 lang-title linkable">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures" target="_blank">JavaScript</a>
+          </div>
+          <div class="text-left col-xs-11 col-sm-9">
+            <pre><code id="variables-javascript-code">{
+    let myVariable = 1234;
+    var myVarVariable = 5678;
+}
+// At this point myVarVariable is still defined. But, myLetVariable is no
+// longer defined.
+let myBoolean = true = false;
+let myNullValue = null;
+let myUndefinedValue = undefined;
+// All numbers are stored in double-precision 64-bit floating point format
+let myNumber = 12345;
+let myString = "blah";
+let mySymbol = Symbol('Your Symbol Description');</code></pre>
+          </div>
+          <div class="col-xs-1 col-sm-1"><i class="fa fa-clipboard clipboard-copy"></i></div>
         </div>
     </section><!-- Variables section-->
 
-    <section id="variables-section" class="section">
-      <h2 class="section-title">Variables and Built-In Data Types</h2>
-        <div class="row">
-          <div class="text-right col-xs-12 col-sm-2 lang-title">Python</div>
+    <section id="classes-section" class="section lang-feature">
+      <h2 class="section-title">Classes</h2>
+        <div class="row python">
+          <div id="Classes-Python" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+            <a href="https://docs.python.org/3/tutorial/classes.html" target="_blank">Python</a>
+          </div>
           <div class="text-left col-xs-11 col-sm-9">
-            <pre><code id="variables-python-code" class="python">myVariableName = 1234 = int(1234)  # Integer</code></pre>
+            <pre><code id="classes-python-code" class="python">class MyClassName(FirstInheritedClassName, OtherInheritedClassName):
+    """Class documentation string"""
+    some_instance_variable = "blah"
+
+    def __init__(self, class_arg_one, class_arg_two):  # Constructor
+        self.args_added = class_arg_one + class_arg_two
+
+    def __del__(self):  # Destructor
+        pass</code></pre>
           </div>
-          <div class="col-xs-1 col-sm-1"><i class="fa fa-clipboard copy-code" data-clipboard-target="#variables-python-code"></i></div>
-        </div>
-        <div class="row" style="padding-top: 5px">
-          <div class="text-right col-xs-12 col-sm-2 lang-title">C / C++</div>
-          <div class="text-left col-xs-11 col-sm-9" class="c">
-            <pre><code class="c">int myVariableName = 1234;  // Integer</code></pre>
+          <div class="col-xs-1 col-sm-1">
+            <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#classes-python-code"></i>
           </div>
-          <div class="col-xs-1 col-sm-1"><i class="fa fa-clipboard copy-code"></i></div>
         </div>
-    </section><!-- Variables section-->
+        <div class="row cpp">
+          <div id="Classes-Cpp" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+            <a href="http://en.cppreference.com/w/cpp/language/classes" target="_blank">C++</a>
+          </div>
+          <div class="text-left col-xs-11 col-sm-9">
+            <pre><code id="classes-cpp-code">class ClassName: public BaseClassName, private Base2ClassName {
+   // In a protected base class, public and protected members become protected
+   // In a private base class, public and protected memmbers become private
+   int myVarOne;  // The default access is private
+   public:
+      // These members and functions can be access by anyone
+      ClassName(int argOne, int argTwo);  // Constructor
+      ClassName(const ClassName &obj);  // Copy Constructor
+      ~ClassName();  // Destructor
+      void publicFunc();
+   protected:
+      // These members and functions can only be access by functions of this
+      // class and classes that inherit from this class
+      int myVarTwo;
+      void protectedFunc();
+
+}
+ClassName::ClassName(int argOne, int argTwo): myVarOne(argOne), myVarTwo(argTwo) {
+    // Constructor Implementation
+    // The ': myPrivateVar(argOne)' is optional and equivalent to doing
+    // myPrivateVar = argOne; in the implementation
+}
+ClassName::ClassName(const ClassName &obj) {
+    // Copy Constructor Implementation
+    myVarOne = new int;
+    *myVarOne = *obj.myVarOne; // Copy the value
+}
+ClassName::~ClassName(void) {}  // Destructor Implementation
+int main() {
+    ClassName myInstance(0, 1);
+    // If ClassName didn't have required constructor arguments, you could
+    // create it with
+    //     ClassName myInstance;
+    ClassName *myInstancePointer = &myInstance;
+    myInstance.publicFunc();
+    myInstancePointer->publicFunc();
+}</code></pre>
+          </div>
+          <div class="col-xs-1 col-sm-1">
+            <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#classes-c-code"></i>
+          </div>
+        </div>
+        <div class="row javascript">
+          <div id="Classes-Javascript" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes" target="_blank">JavaScript</a>
+          </div>
+          <div class="text-left col-xs-11 col-sm-9">
+            <pre><code class="javascript" id="classes-javascript-code">Class ClassName extends BaseClassName {
+    constructor(argOne) {
+        this.myVarOne = argOne;
+    }
+    function someMemberFunc() {
+        this.myVarOne = "blah";
+    }
+}
+let myInstance = new ClassName("myarg");
+myInstance.someMemberFunc();</code></pre>
+          </div>
+          <div class="col-xs-1 col-sm-1">
+            <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#classes-javascript-code"></i>
+          </div>
+        </div>
+    </section><!-- Classes section-->
+
+    <section id="functions-section" class="section lang-feature">
+      <h2 class="section-title linkable" id="Functions">Functions</h2>
+      <div class="row python">
+        <div id="Functions-Python" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+          <a href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions" target="_blank">Python</a>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="functions-python-code">def myFunc(requiredArgOne, requiredArgTwo, optionalArg='Default Value', *args, **kwargs):
+    """This is the function's docstring. Shown when doing help(myFunc)."""
+    # args is a list of positional arguments if more than 3 are provided
+    # kwargs is a dictionary with all of the keyword args given, but not
+    #  specified in the def
+    return requiredArgOne + optionArg
+
+myFunc(3, optionalArg=5, requiredArgTwo=7)
+</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#functions-python-code"></i>
+        </div>
+      </div>
+      <div class="row c cpp" class="lang-example-row">
+        <div class="text-right col-xs-12 col-sm-2 lang-title">
+          <div id="Functions-C" class="linkable"><a href="http://en.cppreference.com/w/c/language/functions" target="_blank">C</a></div>
+          <div id="Functions-Cpp" class="linkable"><a href="http://en.cppreference.com/w/cpp/language/function" target="_blank">C++</a></div>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="functions-c-code">int myFunc(int argOne, int argTwo = 5);  // Declaration, typically in .h file
+int myFunc(int argOne, int argTwo) {  // Implementation
+    return argOne + argTwo;
+}
+int main() {
+    int myFunReturnVal = myFunc(3, 10);
+}</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#functions-c-code"></i>
+        </div>
+      </div>
+      <div class="row javascript" class="lang-example-row">
+        <div class="text-right col-xs-12 col-sm-2 lang-title">
+          <div id="Functions-JavaScript" class="linkable">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank">JavaScript</a>
+          </div>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="functions-javascript-code">function myFuncOne(argOne, argTwo=4, ...restOfArgs) {
+    return argOne + argTwo;
+}
+myFuncOne(2, 5);
+let myFuncTwo = function(argOne, argTwo) {
+    return argOne + argTwo;
+}
+myFuncTwo(2, 5);</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#functions-javascript-code"></i>
+        </div>
+      </div>
+    </section><!-- Functions section-->
+
+    <section id="includes-section" class="section lang-feature">
+      <h2 class="section-title linkable" id="Includes">Includes</h2>
+      <div class="row python">
+        <div id="Includes-Python" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+          <a href="https://docs.python.org/3/tutorial/modules.html" target="_blank">Python</a>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="includes-python-code">import * from path.to.filename
+from path.to.filename import blahfunc as myfuncname
+import path.to.filename as filename
+
+filename.blahfunc()
+blahfunc()
+myfuncname()
+</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#includes-python-code"></i>
+        </div>
+      </div>
+      <div class="row c cpp" class="lang-example-row">
+        <div class="text-right col-xs-12 col-sm-2 lang-title">
+          <div id="Includes-C" class="linkable"><a href="http://en.cppreference.com/w/c/preprocessor/include" target="_blank">C</a></div>
+          <div id="Includes-Cpp" class="linkable"><a href="http://en.cppreference.com/w/cpp/preprocessor/include" target="_blank">C++</a></div>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="includes-c-code">// Contents of the myHeaderFile.h file:
+#ifndef MYHEADERFILE_H /* any name uniquely mapped to file name */
+#define MYHEADERFILE_H
+// Contents of the file are here
+#endif
+
+// And in the .c or .cpp file:
+#include "myHeaderFile.h"
+#include <std-library-include>  // This syntax is used for standard library includes</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#includes-c-code"></i>
+        </div>
+      </div>
+      <div class="row javascript" class="lang-example-row">
+        <div class="text-right col-xs-12 col-sm-2 lang-title">
+          <div id="Includes-JavaScript-CommonJS" class="linkable">
+            <a href="https://webpack.github.io/docs/commonjs.html" target="_blank">JavaScript CommonJS</a>
+          </div>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="includes-javascript-code">// This is the method used by node and most cross-compilers
+// File moduleA.js:
+module.exports = function( value ){
+    return value*2;
+}
+
+// Another File:
+let moduleAFunc = require('./moduleA');
+moduleAFunc(4);</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#includes-javascript-code"></i>
+        </div>
+      </div>
+      <div class="row javascript" class="lang-example-row">
+        <div class="text-right col-xs-12 col-sm-2 lang-title">
+          <div id="Includes-JavaScript-ES6" class="linkable">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import" target="_blank">JavaScript ES6</a>
+          </div>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="includes-javascript-code-es6">// This is the new standard way, but might not be supported yet
+// File someFile.js:
+export function myFunc() {}
+
+// Some other file:
+import { myFunc } from 'someFile';
+myFunc();</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#includes-javascript-es6"></i>
+        </div>
+      </div>
+    </section><!-- Includes section-->
     
-    <section id="about-section" class="contact-section section">
+    <section id="about" class="section lang-feature">
       <h2 class="section-title">About</h2>
       <div class="intro">
         <div class="dialog">
@@ -182,7 +557,7 @@ triple-quote multiline string as a comment.
   <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
   <!--script src="assets/js/demo/style-switcher.js"></script-->  
   
-  <!-- Javascript -->      
+  <!-- JavaScript -->
   <script type="text/javascript" src="assets/plugins/jquery-1.12.4.min.js"></script>
   <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
   <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
