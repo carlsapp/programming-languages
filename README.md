@@ -3,11 +3,12 @@ View the cheat sheet at https://carlsapp.github.io/programming-languages.
 
 # TODO and Ideas List
 * Add these programming features:
-  * While Loop
-  * For Loop
+  * While Loops
+  * For Loops
   * Try/Catch Exceptions
   * Operator Overloads
-  * Switch Statement
+  * Switch Statements
+  * If/Else Statements
 * Add these languages:
   * Bash
   * CShell (after adding XML and ability to filter which languages are shown)
