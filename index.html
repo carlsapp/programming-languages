@@ -19,7 +19,7 @@
   
   <!-- Theme CSS -->  
   <link id="theme-style" rel="stylesheet" href="assets/css/styles-11.css">
-  <link id="theme-style" rel="stylesheet" href="assets/css/tomorrow-night.css">
+  <link rel="stylesheet" href="assets/css/tomorrow-night.css">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -35,7 +35,7 @@
         <h1 class="name">The Programming Cheat Sheet</h1>
         <div class="title"></div>
         <div class="profile">
-          <p>This page compares common programming elements between several popular
+          <p>This page compares the syntax of common programming elements between several popular
           languages. Each example is a snippet that can be easily copy-pasted into your code.
           A more modern version of <a href="http://rigaux.org/language-study/syntax-across-languages.html" target="_blank">this great comparison page</a>.</p>
         </div><!--//profile-->
@@ -60,6 +60,16 @@
             <a class="scrollto" href="#variables-python-code">Python</a>
             <a class="scrollto" href="#variables-c-code">C / C++</a>
             <a class="scrollto" href="#variables-javascript-code">JavaScript</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-right col-xs-12 col-sm-4">
+            <a class="scrollto" href="#if-section">If-Else Statements:</a>
+          </div>
+          <div class="text-left col-xs-12 col-sm-8 lang-list">
+            <a class="scrollto" href="#if-python-code">Python</a>
+            <a class="scrollto" href="#if-c-code">C / C++</a>
+            <a class="scrollto" href="#if-javascript-code">JavaScript</a>
           </div>
         </div>
         <div class="row">
@@ -94,7 +104,17 @@
         </div>
         <div class="row">
           <div class="text-right col-xs-12 col-sm-4">
-            <a class="scrollto" href="#includes-section">While Loops:</a>
+            <a class="scrollto" href="#for-section">For Loops:</a>
+          </div>
+          <div class="text-left col-xs-12 col-sm-8 lang-list">
+            <a class="scrollto" href="#for-python-code">Python</a>
+            <a class="scrollto" href="#for-c-code">C / C++</a>
+            <a class="scrollto" href="#for-javascript-code">JavaScript</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-right col-xs-12 col-sm-4">
+            <a class="scrollto" href="#while-section">While Loops:</a>
           </div>
           <div class="text-left col-xs-12 col-sm-8 lang-list">
             <a class="scrollto" href="#while-python-code">Python</a>
@@ -104,31 +124,21 @@
         </div>
         <div class="row">
           <div class="text-right col-xs-12 col-sm-4">
-            <a class="scrollto" href="#includes-section">For Loops:</a>
+            <a class="scrollto" href="#exceptions-section">Try/Catch Exceptions:</a>
           </div>
           <div class="text-left col-xs-12 col-sm-8 lang-list">
-            <a class="scrollto" href="">Python</a>
-            <a class="scrollto" href="">C / C++</a>
-            <a class="scrollto" href="">JavaScript</a>
+            <a class="scrollto" href="#exceptions-python-code">Python</a>
+            <a class="scrollto" href="#exceptions-cpp-code">C++</a>
+            <a class="scrollto" href="#exceptions-javascript-code">JavaScript</a>
           </div>
         </div>
         <div class="row">
           <div class="text-right col-xs-12 col-sm-4">
-            <a class="scrollto" href="#includes-section">Try/Catch Exceptions:</a>
+            <a class="scrollto" href="#op-overload-section">Operator Overloads:</a>
           </div>
           <div class="text-left col-xs-12 col-sm-8 lang-list">
-            <a class="scrollto" href="">Python</a>
-            <a class="scrollto" href="">C / C++</a>
-            <a class="scrollto" href="">JavaScript</a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="text-right col-xs-12 col-sm-4">
-            <a class="scrollto" href="#op-overloads-section">Operator Overloads:</a>
-          </div>
-          <div class="text-left col-xs-12 col-sm-8 lang-list">
-            <a class="scrollto" href="">Python</a>
-            <a class="scrollto" href="">C / C++</a>
+            <a class="scrollto" href="#op-overload-python-code">Python</a>
+            <a class="scrollto" href="#op-overload-cpp-code">C++</a>
           </div>
         </div>
       </div><!--//container-->
@@ -140,6 +150,7 @@
           <ul id="page-nav" class="nav page-nav list-inline">
             <li><a class="scrollto" href="#comments-section">Comments</a></li>
             <li><a class="scrollto" href="#variables-section">Variables</a></li>
+            <li><a class="scrollto" href="#if-section">If</a></li>
             <li><a class="scrollto" href="#classes-section">Classes</a></li>
             <li><a class="scrollto" href="#functions-section">Functions</a></li>
             <li><a class="scrollto" href="#includes-section">Includes</a></li>
@@ -147,10 +158,10 @@
         </div>
         <div class="container">
           <ul id="page-nav-2" class="nav page-nav list-inline"-->
-            <li><a class="scrollto" href="#for-section">For Loops</a></li>
-            <li><a class="scrollto" href="#while-section">While Loops</a></li>
+            <li><a class="scrollto" href="#for-section">For</a></li>
+            <li><a class="scrollto" href="#while-section">While</a></li>
             <li><a class="scrollto" href="#exceptions-section">Exceptions</a></li>
-            <li><a class="scrollto" href="#op-overloads-section">Operator Overload</a></li>
+            <li><a class="scrollto" href="#op-overload-section">Operator Overload</a></li>
             <li><a class="scrollto" href="#about-section">About</a></li>
           </ul><!--//page-nav-->
         </div>
@@ -219,7 +230,9 @@ myFrozenSetVar = frozenset(['any','iterable','type'])  # Immutable
 # Mapping Types - Mutable
 myDictVar = {'one': 1, 'two', 2} = dict(one=1, two=2) = dict([('one', 1), ('two', 2)])</code></pre>
           </div>
-          <div class="col-xs-1 col-sm-1"><i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#variables-python-code"></i></div>
+          <div class="col-xs-1 col-sm-1">
+            <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#variables-python-code"></i>
+          </div>
         </div>
         <div class="row c cpp">
           <div class="text-right col-xs-12 col-sm-2 lang-title">
@@ -252,7 +265,9 @@ double myDouble;  // Double precision, 64 bits
 long double myLongDouble;  // Extended precision, 80 bits
 // Fixed width integer types: [u]int[_(fast,least)][8,16,32,64]_t</code></pre>
           </div>
-          <div class="col-xs-1 col-sm-1"><i class="fa fa-clipboard clipboard-copy"></i></div>
+          <div class="col-xs-1 col-sm-1">
+            <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#variables-c-code"></i>
+          </div>
         </div>
         <div class="row javascript">
           <div class="text-right col-xs-12 col-sm-2 lang-title linkable">
@@ -273,9 +288,51 @@ let myNumber = 12345;
 let myString = "blah";
 let mySymbol = Symbol('Your Symbol Description');</code></pre>
           </div>
-          <div class="col-xs-1 col-sm-1"><i class="fa fa-clipboard clipboard-copy"></i></div>
+          <div class="col-xs-1 col-sm-1">
+            <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#variables-javascript-code"></i>
+          </div>
         </div>
     </section><!-- Variables section-->
+
+    <section id="if-section" class="section lang-feature">
+      <h2 id="If" class="section-title linkable">If-Else Statements</h2>
+        <div class="row python"><!-- Python Row -->
+          <div id="If-Python" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+            <a href="" target="_blank">Python</a>
+          </div>
+          <div class="text-left col-xs-11 col-sm-9">
+            <pre><code id="if-python-code">if 1 == 2:
+    pass
+elif 2 == 3:
+    pass
+else:
+    pass</code></pre></div>
+          <div class="col-xs-1 col-sm-1">
+            <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#if-python-code"></i>
+          </div>
+        </div>
+        <div class="row c cpp javascript">
+          <div class="text-right col-xs-12 col-sm-2 lang-title">
+            <div id="If-C" class="linkable">
+              <a href="http://en.cppreference.com/w/c/language/if" target="_blank">C</a>
+            </div>
+            <div id="If-Cpp" class="linkable">
+              <a href="http://en.cppreference.com/w/cpp/language/if" target="_blank">C++</a>
+            </div>
+            <div id="If-JavaScript" class="linkable">
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else" target="_blank">JavaScript</a>
+            </div>
+          </div>
+          <div class="text-left col-xs-11 col-sm-9">
+            <pre><code id="if-c-code" class="c">if (1 == 2) {
+} else if (2 == 3) {
+} else {
+}</code></pre></div>
+          <div class="col-xs-1 col-sm-1">
+            <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#if-c-code"></i>
+          </div>
+        </div>
+    </section><!-- If-Else section-->
 
     <section id="classes-section" class="section lang-feature">
       <h2 class="section-title">Classes</h2>
@@ -336,13 +393,13 @@ int main() {
     // If ClassName didn't have required constructor arguments, you could
     // create it with
     //     ClassName myInstance;
-    ClassName *myInstancePointer = &myInstance;
+    ClassName *myInstancePointer = &amp;myInstance;
     myInstance.publicFunc();
     myInstancePointer->publicFunc();
 }</code></pre>
           </div>
           <div class="col-xs-1 col-sm-1">
-            <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#classes-c-code"></i>
+            <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#classes-cpp-code"></i>
           </div>
         </div>
         <div class="row javascript">
@@ -462,7 +519,7 @@ myfuncname()
 
 // And in the .c or .cpp file:
 #include "myHeaderFile.h"
-#include <std-library-include>  // This syntax is used for standard library includes</code></pre>
+#include &lt;std-library-include&gt;  // This syntax is used for standard library includes</code></pre>
         </div>
         <div class="col-xs-1 col-sm-1">
           <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#includes-c-code"></i>
@@ -509,8 +566,217 @@ myFunc();</code></pre>
         </div>
       </div>
     </section><!-- Includes section-->
+
+    <section id="for-section" class="section lang-feature">
+      <h2 class="section-title">For Loops</h2>
+      <div class="row python">
+        <div id="For-Python" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+          <a href="https://docs.python.org/3/reference/compound_stmts.html#the-for-statement" target="_blank">Python</a>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="for-python-code" class="python">for i in range(5):
+    if i == 2:
+        break</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#for-python-code"></i>
+        </div>
+      </div>
+      <div class="row c cpp" class="lang-example-row">
+        <div class="text-right col-xs-12 col-sm-2 lang-title">
+          <div id="For-C" class="linkable">
+            <a href="http://en.cppreference.com/w/c/language/for" target="_blank">C</a>
+          </div>
+          <div id="For-Cpp" class="linkable">
+            <a href="http://en.cppreference.com/w/cpp/language/for" target="_blank">C++</a>
+          </div>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="for-c-code">for (int i = 0; i < 5; i++) {
+    if (i == 2)
+        break;
+}</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#for-c-code"></i>
+        </div>
+      </div>
+      <div class="row javascript">
+        <div id="For-Javascript" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for" target="_blank">JavaScript</a>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code class="javascript" id="for-javascript-code">for (let i = 0; i < 5; i++) {
+    if (i == 2)
+        break;
+}
+for (let i of [0, 1, 2, 3, 4]) {
+    if (i == 2)
+        break;
+}
+let ourObj = {a: 0, b: 1, c: 2, d: 3, e: 4}
+for (let i in ourObj) {
+    if (ourObj[i] == 2)
+        break;
+}</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#for-javascript-code"></i>
+        </div>
+      </div>
+    </section><!-- For Loops section-->
+
+    <section id="while-section" class="section lang-feature">
+      <h2 class="section-title">While Loops</h2>
+      <div class="row python">
+        <div id="While-Python" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+          <a href="https://docs.python.org/3/reference/compound_stmts.html#while" target="_blank">Python</a>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="while-python-code" class="python">someVariable = 0
+while someVariable < 2:
+    someVariable += 1  # Do Something</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#while-python-code"></i>
+        </div>
+      </div>
+      <div class="row c cpp" class="lang-example-row">
+        <div class="text-right col-xs-12 col-sm-2 lang-title">
+          <div id="While-C" class="linkable"><a href="http://en.cppreference.com/w/c/language/while" target="_blank">C</a> <a href="http://en.cppreference.com/w/c/language/do" target="_blank">(do-while)</a></div>
+          <div id="While-Cpp" class="linkable"><a href="http://en.cppreference.com/w/cpp/language/while" target="_blank">C++</a> <a href="http://en.cppreference.com/w/cpp/language/do" target="_blank">(do-while)</a></div>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="while-c-code">int main() {
+    int someVariable = 0;
+    while (someVariable < 2) {
+        someVariable++;  // This block will get executed twice
+    }
+    do {
+        someVariable++;  // This block will get executed once
+    } while (someVariable < 2)
+}</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#while-c-code"></i>
+        </div>
+      </div>
+      <div class="row javascript">
+        <div id="While-Javascript" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while" target="_blank">JavaScript</a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while" target="_blank">(do-while)</a>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code class="javascript" id="while-javascript-code">let someVariable = 0;
+while(someVariable < 2) {
+    someVariable++;
+}
+do {
+    someVariable++;
+} while(someVariable < 2);</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#while-javascript-code"></i>
+        </div>
+      </div>
+    </section><!-- While Loops section-->
+
+    <section id="exceptions-section" class="section lang-feature">
+      <h2 class="section-title">Try/Catch Exceptions</h2>
+      <div class="row python">
+        <div id="Exceptions-Python" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+          <a href="https://docs.python.org/3/tutorial/errors.html#exceptions" target="_blank">Python</a>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="exceptions-python-code" class="python">try:
+    raise Exception("Some message")
+except (ValueError, OSError) as e:
+    print(e)
+except Exception as e:
+    print(e)</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#exceptions-python-code"></i>
+        </div>
+      </div>
+      <div class="row c cpp" class="lang-example-row">
+        <div class="text-right col-xs-12 col-sm-2 lang-title">
+          <div id="Exceptions-Cpp" class="linkable">
+            <a href="http://en.cppreference.com/w/cpp/language/try_catch" target="_blank">C++</a>
+          </div>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code id="exceptions-cpp-code">#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+
+int main() {
+    try {  // Throwing an integer exception
+        throw 42;
+    } catch (int i) {
+        std::cout << " the integer exception was caught, with value: " << i << '\n';
+    }
+    try {  // Throwing a std library exception
+        throw std::runtime_error("error");
+    } catch (const std::exception& e) { // caught by reference to base
+        std::cout << e.what();
+    }
+}</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#exceptions-cpp-code"></i>
+        </div>
+      </div>
+      <div class="row javascript">
+        <div id="Exceptions-Javascript" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="_blank">JavaScript</a>
+        </div>
+        <div class="text-left col-xs-11 col-sm-9">
+          <pre><code class="javascript" id="exceptions-javascript-code">try {
+   throw 'myException'; // Generates an exception
+}
+catch (e) {
+} finally {}</code></pre>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#exceptions-javascript-code"></i>
+        </div>
+      </div>
+    </section><!-- Try/Catch Exceptions section-->
+
+    <section id="op-overload-section" class="section lang-feature">
+      <h2 class="section-title">Operator Overloads</h2>
+        <div class="row python">
+          <div id="Operator-Overload-Python" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+            <a href="https://docs.python.org/3/library/operator.html" target="_blank">Python</a>
+          </div>
+          <div class="text-left col-xs-11 col-sm-9">
+            <pre><code id="op-overload-python-code" class="python">
+
+
+
+</code></pre>
+          </div>
+          <div class="col-xs-1 col-sm-1">
+            <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#op-overload-python-code"></i>
+          </div>
+        </div>
+        <div class="row cpp">
+          <div id="Operator-Overload-Cpp" class="text-right col-xs-12 col-sm-2 lang-title linkable">
+            <a href="http://en.cppreference.com/w/cpp/language/operators" target="_blank">C++</a>
+          </div>
+          <div class="text-left col-xs-11 col-sm-9">
+            <pre><code id="op-overload-cpp-code">
+
+
+</code></pre>
+          </div>
+          <div class="col-xs-1 col-sm-1">
+            <i class="fa fa-clipboard clipboard-copy" data-clipboard-target="#op-overload-cpp-code"></i>
+          </div>
+        </div>
+    </section><!-- Operator Overloads section-->
     
-    <section id="about" class="section lang-feature">
+    <section id="about-section" class="section lang-feature">
       <h2 class="section-title">About</h2>
       <div class="intro">
         <div class="dialog">
