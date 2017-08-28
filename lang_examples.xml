@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lang_examples>
+
+  <feature name="Comments">
+    <example>
+      <lang name="Python" link="https://docs.python.org/3/reference/lexical_analysis.html#comments" />
+      <code>
+# In-line Comment
+'''
+Python doesn't have multiline comments. Although not officially a comment. Its common practice to use a 
+triple-quote multiline string as a comment.
+'''
+"""You can also use double quotes"""
+      </code>
+    </example>
+    <example>
+      <lang name="C" link="http://en.cppreference.com/w/c/comment" />
+      <lang name="C++" link="http://en.cppreference.com/w/cpp/comment" />
+      <lang name="JavaScript" link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments" />
+      <code>
+// Single-line Comment
+/*
+ C, C++, and JavaScript have the same
+ single-line and multiline comment syntax
+*/
+      </code>
+    </example>
+    <example>
+      <lang name="Bash" link="https://www.gnu.org/software/bash/manual/html_node/Comments.html" />
+      <code>
+# Bash only has an in-line comment
+      </code>
+    </example>
+  </feature>
+
+  <feature name="Variables and Built-In Data Types" short_name="Variables">
+    <example>
+      <lang name="Python" link="https://docs.python.org/3/library/stdtypes.html" />
+      <code>
+myIntegerVar = 1234 = int('1234', base=10)  # Immutable
+myFloatVar = 1.234 = float('1.2345')  # Immutable
+myComplexVar = complex('1+3j') = complex(real=1, imag=3)  # Immutable
+myBoolVar = bool(0) = True = False  # Immutable
+myStringVar = "blah" = str('')  # Immutable
+# Sequence Types
+myListVar = [] = list(['any','iterable','type'])  # Mutable
+myTupleVar = () = tuple(['any','iterable','type'])  # Immutable
+# Set Types
+mySetVar = set(['any','iterable','type'])  # Mutable
+myFrozenSetVar = frozenset(['any','iterable','type'])  # Immutable
+# Mapping Types - Mutable
+myDictVar = {'one': 1, 'two', 2} = dict(one=1, two=2) = dict([('one', 1), ('two', 2)])
+      </code>
+    </example>
+    <example>
+      <lang name="C" link="http://en.cppreference.com/w/c/language/arithmetic_types" />
+      <lang name="C++" link="http://en.cppreference.com/w/cpp/language/types" />
+      <code>
+void *pointerToNothing;  // Void can only be used for pointer and return types
+bool myBoolean = true = false;
+signed char mySignedChar;  // 8 bits
+unsigned char myUnsignedChar;  // 8 bits
+char myChar;  // 8 bits
+wchar_t myWChar;  //
+char16_t myChar16;  // 16 bits
+char32_t myChar32;  // 32 bits
+short int myShortInt;  // = short = signed short = signed short int >16 bits
+unsigned short int myUSInt;  // = unsigned short >16 bits
+int myInt;  // = signed = signed int >16 (sometimes >32) bits
+unsigned int myUnsignedInt; // = unsigned >16 (sometimes >32) bits
+long int myLInt;  // = long = signed long = signed long int >32 (sometimes >64) bits
+unsigned long int myULInt;  // = unsigned long >32 (sometimes >64) bits
+long long int myLLInt;  // = long long = signed long long = signed long long int >64 bits
+// Floating Point Types
+float myFloat;  // Single precision, 32 bits
+double myDouble;  // Double precision, 64 bits
+long double myLongDouble;  // Extended precision, 80 bits
+// Fixed width integer types: [u]int[_(fast,least)][8,16,32,64]_t
+      </code>
+    </example>
+    <example>
+      <lang name="JavaScript" link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures" />
+      <code>
+{
+    let myVariable = 1234;
+    var myVarVariable = 5678;
+}
+// At this point myVarVariable is still defined. But, myLetVariable is no
+// longer defined.
+let myBoolean = true = false;
+let myNullValue = null;
+let myUndefinedValue = undefined;
+// All numbers are stored in double-precision 64-bit floating point format
+let myNumber = 12345;
+let myString = "blah";
+let mySymbol = Symbol('Your Symbol Description');
+      </code>
+    </example>
+    <example>
+      <lang name="Bash" link="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html#Shell-Parameters" />
+      <lang name="Expansion" link="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html" display_in_table="false" />
+      <code>
+my_variable=Anything
+# If there's a space, you need to use quotes
+my_date_command="date +%Y%m%d"
+my_num_var=5
+echo $my_variable
+echo ${my_variable}  # The braces are optional. There are many things you can do here.
+echo $($my_date_command)  # Parenthesis will execute the string
+echo $(($my_num_var + 1))  # Double parenthesis will do arithmetic
+      </code>
+    </example>
+  </feature>
+
+  <feature name="If-Else Statements" short_name="If">
+    <example>
+      <lang name="Python" link="https://docs.python.org/3/reference/compound_stmts.html#the-if-statement" />
+      <code>
+if 1 == 2:
+    pass
+elif 2 == 3:
+    pass
+else:
+    pass
+      </code>
+    </example>
+    <example>
+      <lang name="C" link="http://en.cppreference.com/w/c/language/if" />
+      <lang name="C++" link="http://en.cppreference.com/w/cpp/language/if" />
+      <lang name="JavaScript" link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else" />
+      <code>
+if (1 == 2) {
+} else if (2 == 3) {
+} else {
+}
+      </code>
+    </example>
+    <example>
+      <lang name="Bash" link="https://www.gnu.org/software/bash/manual/html_node/Conditional-Constructs.html#Conditional-Constructs" />
+      <code>
+myvar1=0; myvar2=1;
+if [[ $myvar1 == 1 &amp;&amp; $myvar2 != 1 ]]; then
+    echo "Matched in the IF statement";
+elif [[ !$myvar1 == 0 ]]; then
+    echo "Matched in the ELIF statement";
+else [[ $myvar1 == 1 || $myvar2 == 1 ]]; then
+    echo "Matched in the ELSE statement";
+fi
+      </code>
+    </example>
+  </feature>
+
+  <feature name="Switch Statements" short_name="Switch">
+    <example>
+      <lang name="Python" link="https://docs.python.org/3/tutorial/controlflow.html" />
+      <code>
+# Python doesn't formally have a switch feature. But, you can do the same thing with if/else.
+if someVariable == 1:
+    pass
+elif someVariable == 2 or someVariable == 3:
+    pass
+else:
+    pass
+      </code>
+    </example>
+    <example>
+      <lang name="C" link="http://en.cppreference.com/w/c/language/switch" />
+      <lang name="C++" link="http://en.cppreference.com/w/cpp/language/switch" />
+      <lang name="JavaScript" link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch" />
+      <code>
+switch(someVariable) {
+    case 1 :
+        break;
+    case 2 :
+    case 3 :
+        // This section gets executed if someVariable is 2 or 3.
+        break;
+    default:  // Optional
+        // If someVariable doesn't match anything above, this gets executed.
+}
+      </code>
+    </example>
+    <example>
+      <lang name="Bash" link="https://www.gnu.org/software/bash/manual/html_node/Conditional-Constructs.html#Conditional-Constructs" />
+      <code>
+case $someVariable in
+    1)
+        echo "Case 1";;
+    2 | 3)
+        echo "Case 2 or Case 3";;
+    *)
+        echo "Default Case";;
+esac
+      </code>
+    </example>
+  </feature>
+
+  <feature name="For Loops" short_name="For">
+    <example>
+      <lang name="Python" link="https://docs.python.org/3/reference/compound_stmts.html#the-for-statement" />
+      <code>
+for i in range(5):
+    if i == 2:
+        break
+      </code>
+    </example>
+    <example>
+      <lang name="C" link="http://en.cppreference.com/w/c/language/for" />
+      <lang name="C++" link="http://en.cppreference.com/w/cpp/language/for" />
+      <code>
+for (int i = 0; i &lt; 5; i++) {
+    if (i == 2)
+        break;
+}
+      </code>
+    </example>
+    <example>
+      <lang name="JavaScript" link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for" />
+      <code>
+for (let i = 0; i &lt; 5; i++) {
+    if (i == 2)
+        break;
+}
+for (let i of [0, 1, 2, 3, 4]) {
+    if (i == 2)
+        break;
+}
+let ourObj = {a: 0, b: 1, c: 2, d: 3, e: 4}
+for (let i in ourObj) {
+    if (ourObj[i] == 2)
+        break;
+}
+      </code>
+    </example>
+    <example>
+      <lang name="Bash" link="https://www.gnu.org/software/bash/manual/html_node/Looping-Constructs.html#Looping-Constructs" />
+      <code>
+for i in 0 2 4 6; do
+    if [[ $i == 2 ]]; then
+        continue;
+    fi
+    if [[ $i == 4 ]]; then
+        break;
+    fi
+    echo "Current Iteration: $i";
+done
+for i in {0..3}; do
+    echo "Current Iteration: $i";
+done
+for i in {0..6..2}; do
+    echo "Current Iteration: $i";
+done
+for (( i=0; i&lt;=6; i++ )); do  
+    echo "Current Iteration: $i";
+done
+      </code>
+    </example>
+  </feature>
+
+  <feature name="While Loops" short_name="While">
+    <example>
+      <lang name="Python" link="https://docs.python.org/3/reference/compound_stmts.html#while" />
+      <code>
+someVariable = 0
+while someVariable &lt; 2:
+    someVariable += 1  # Do Something
+      </code>
+    </example>
+    <example>
+      <lang name="C While" short_name="C" link="http://en.cppreference.com/w/c/language/while" />
+      <lang name="C Do-While" link="http://en.cppreference.com/w/c/language/do" display_in_table="false" />
+      <lang name="C++ While" short_name="C++" link="http://en.cppreference.com/w/cpp/language/while" />
+      <lang name="C++ Do-While" link="http://en.cppreference.com/w/cpp/language/do" display_in_table="false" />
+      <code>
+int main() {
+    int someVariable = 0;
+    while (someVariable &lt; 2) {
+        someVariable++;  // This block will get executed twice
+    }
+    do {
+        someVariable++;  // This block will get executed once
+    } while (someVariable &lt; 2)
+}
+      </code>
+    </example>
+    <example>
+      <lang name="JS While" short_name="JavaScript" link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while" />
+      <lang name="JS Do-While" link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while" display_in_table="false" />
+      <code>
+let someVariable = 0;
+while(someVariable &lt; 2) {
+    someVariable++;
+}
+do {
+    someVariable++;
+} while(someVariable &lt; 2);
+      </code>
+    </example>
+    <example>
+      <lang name="Bash" link="https://www.gnu.org/software/bash/manual/html_node/Looping-Constructs.html#Looping-Constructs" />
+      <code>
+while [[ $i &lt; 3 ]]; do
+    echo $i;
+    i=$(($i + 1));
+done
+      </code>
+    </example>
+  </feature>
+
+  <feature name="Includes">
+    <example>
+      <lang name="Python" link="https://docs.python.org/3/tutorial/modules.html" />
+      <code>
+import * from path.to.filename
+from path.to.filename import blahfunc as myfuncname
+import path.to.filename as filename
+
+filename.blahfunc()
+blahfunc()
+myfuncname()
+      </code>
+    </example>
+    <example>
+      <lang name="C" link="http://en.cppreference.com/w/c/preprocessor/include" />
+      <lang name="C++" link="http://en.cppreference.com/w/cpp/preprocessor/include" />
+      <code>
+// Contents of the myHeaderFile.h file:
+#ifndef MYHEADERFILE_H /* any name uniquely mapped to file name */
+#define MYHEADERFILE_H
+// Contents of the file are here
+#endif
+
+// And in the .c or .cpp file:
+#include "myHeaderFile.h"
+#include &lt;std-library-include&gt;  // This syntax is used for standard library includes
+      </code>
+    </example>
+    <example>
+      <lang name="CommonJS" short_name="JavaScript" link="https://webpack.github.io/docs/commonjs.html" />
+      <code>
+// This is the method used by node and most cross-compilers
+// File moduleA.js:
+module.exports = function( value ){
+    return value*2;
+}
+
+// Another File:
+let moduleAFunc = require('./moduleA');
+moduleAFunc(4);
+      </code>
+    </example>
+    <example>
+      <lang name="JS ES6" link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import" display_in_table="false" />
+      <code>
+// This is the new standard way, but might not be supported yet
+// File someFile.js:
+export function myFunc() {}
+
+// Some other file:
+import { myFunc } from 'someFile';
+myFunc();
+      </code>
+    </example>
+    <example>
+      <lang name="Bash" link="https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html" />
+      <code>
+// File someFile.sh
+mysourcedvar="blah"
+
+// Some Other file:
+source someFile.sh
+echo $mysourcedvar
+      </code>
+    </example>
+  </feature>
+
+  <feature name="Functions">
+    <example>
+      <lang name="Python" link="https://docs.python.org/3/tutorial/controlflow.html#defining-functions" />
+      <code>
+def myFunc(requiredArgOne, requiredArgTwo, optionalArg='Default Value', *args, **kwargs):
+    """This is the function's docstring. Shown when doing help(myFunc)."""
+    # args is a list of positional arguments if more than 3 are provided
+    # kwargs is a dictionary with all of the keyword args given, but not
+    #  specified in the def
+    return requiredArgOne + optionArg
+
+myFunc(3, optionalArg=5, requiredArgTwo=7)
+      </code>
+    </example>
+    <example>
+      <lang name="C" link="http://en.cppreference.com/w/c/language/functions" />
+      <lang name="C++" link="http://en.cppreference.com/w/cpp/language/function" />
+      <code>
+int myFunc(int argOne, int argTwo = 5);  // Declaration, typically in .h file
+int myFunc(int argOne, int argTwo) {  // Implementation
+    return argOne + argTwo;
+}
+int main() {
+    int myFunReturnVal = myFunc(3, 10);
+}
+      </code>
+    </example>
+    <example>
+      <lang name="JavaScript" link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" />
+      <code>
+function myFuncOne(argOne, argTwo=4, ...restOfArgs) {
+    return argOne + argTwo;
+}
+myFuncOne(2, 5);
+let myFuncTwo = function(argOne, argTwo) {
+    return argOne + argTwo;
+}
+myFuncTwo(2, 5);
+      </code>
+    </example>
+    <example>
+      <lang name="Bash" link="https://www.gnu.org/software/bash/manual/html_node/Shell-Functions.html#Shell-Functions" />
+      <code>
+myFunc () {  # The parenthesis will always be empty
+  # Reference the function arguments with $1, $2, etc.
+  echo "Function argument 1: $1";
+  echo "Function argument 2: $2";
+}
+myFunc arg1 "my arg 2";
+
+      </code>
+    </example>
+  </feature>
+
+  <feature name="Classes">
+    <example>
+      <lang name="Python" link="https://docs.python.org/3/tutorial/classes.html" />
+      <code>
+class MyClassName(FirstInheritedClassName, OtherInheritedClassName):
+    """Class documentation string"""
+    some_instance_variable = "blah"
+
+    def __init__(self, class_arg_one, class_arg_two):  # Constructor
+        self.args_added = class_arg_one + class_arg_two
+
+    def __del__(self):  # Destructor
+        pass
+      </code>
+    </example>
+    <example>
+      <lang name="C++" link="http://en.cppreference.com/w/cpp/language/classes" />
+      <code>
+class ClassName: public BaseClassName, private Base2ClassName {
+   // In a protected base class, public and protected members become protected
+   // In a private base class, public and protected memmbers become private
+   int myVarOne;  // The default access is private
+   public:
+      // These members and functions can be access by anyone
+      ClassName(int argOne, int argTwo);  // Constructor
+      ClassName(const ClassName &amp;obj);  // Copy Constructor
+      ~ClassName();  // Destructor
+      void publicFunc();
+   protected:
+      // These members and functions can only be access by functions of this
+      // class and classes that inherit from this class
+      int myVarTwo;
+      void protectedFunc();
+
+}
+ClassName::ClassName(int argOne, int argTwo): myVarOne(argOne), myVarTwo(argTwo) {
+    // Constructor Implementation
+    // The ': myPrivateVar(argOne)' is optional and equivalent to doing
+    // myPrivateVar = argOne; in the implementation
+}
+ClassName::ClassName(const ClassName &amp;obj) {
+    // Copy Constructor Implementation
+    myVarOne = new int;
+    *myVarOne = *obj.myVarOne; // Copy the value
+}
+ClassName::~ClassName(void) {}  // Destructor Implementation
+int main() {
+    ClassName myInstance(0, 1);
+    // If ClassName didn't have required constructor arguments, you could
+    // create it with
+    //     ClassName myInstance;
+    ClassName *myInstancePointer = &amp;myInstance;
+    myInstance.publicFunc();
+    myInstancePointer->publicFunc();
+}
+      </code>
+    </example>
+    <example>
+      <lang name="JavaScript" link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes" />
+      <code>
+Class ClassName extends BaseClassName {
+    constructor(argOne) {
+        this.myVarOne = argOne;
+    }
+    function someMemberFunc() {
+        this.myVarOne = "blah";
+    }
+}
+let myInstance = new ClassName("myarg");
+myInstance.someMemberFunc();
+      </code>
+    </example>
+  </feature>
+
+  <feature name="Try/Catch Exceptions" short_name="Exceptions">
+    <example>
+      <lang name="Python" link="https://docs.python.org/3/tutorial/errors.html#exceptions" />
+      <code>
+try:
+    raise Exception("Some message")
+except (ValueError, OSError) as e:
+    print(e)
+except Exception as e:
+    print(e)
+      </code>
+    </example>
+    <example>
+      <lang name="C++" link="http://en.cppreference.com/w/cpp/language/try_catch" />
+      <code>
+#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+
+int main() {
+    try {  // Throwing an integer exception
+        throw 42;
+    } catch (int i) {
+        std::cout &lt;&lt; " the integer exception was caught, with value: " &lt;&lt; i &lt;&lt; '\n';
+    }
+    try {  // Throwing a std library exception
+        throw std::runtime_error("error");
+    } catch (const std::exception&amp; e) { // caught by reference to base
+        std::cout &lt;&lt; e.what();
+    }
+}
+      </code>
+    </example>
+    <example>
+      <lang name="JavaScript" link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" />
+      <code>
+try {
+   throw 'myException'; // Generates an exception
+}
+catch (e) {
+} finally {}
+      </code>
+    </example>
+  </feature>
+
+  <feature name="Operator Overloads" short_name="Overloads">
+    <example>
+      <lang name="Python" link="https://docs.python.org/3/library/operator.html" />
+      <code>
+# Coming Soon ...
+      </code>
+    </example>
+    <example>
+      <lang name="C++" link="http://en.cppreference.com/w/cpp/language/operators" />
+      <code>
+// Coming Soon ...
+      </code>
+    </example>
+  </feature>
+<!--
+
+  <feature name="" short_name="">
+    <example>
+      <lang name="Python" link="" />
+      <code>
+
+      </code>
+    </example>
+    <example>
+      <lang name="C" link="" />
+      <lang name="C++" link="" />
+      <code>
+
+      </code>
+    </example>
+    <example>
+      <lang name="JavaScript" link="" />
+      <code>
+
+      </code>
+    </example>
+  </feature>
+-->
+</lang_examples>

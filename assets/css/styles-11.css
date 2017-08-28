@@ -223,7 +223,7 @@ a.btn:hover {
 }
 .page-nav-wrapper .page-nav li {
   /*margin-right: 30px;*/
-  padding-right: 5px;
+  padding-right: 10px;
   display: inline-block;
   background: none;
 }
@@ -271,7 +271,7 @@ a.btn:hover {
   background-clip: padding-box;
 }
 .section:last-child {
-  margin-bottom: 0;
+  /*margin-bottom: 0;*/
 }
 .section-title {
   margin-top: 0;
@@ -535,8 +535,8 @@ a.btn:hover {
   margin-bottom: 30px;
 }
 .portfolio-section .item-inner {
-  background: #607D8B;
-  color: #fff;
+  background: #FFF;
+  color: #607D8B;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -551,7 +551,7 @@ a.btn:hover {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 }
 .portfolio-section .item-inner:hover {
-  background: #648291;
+  background: #FFF;
 }
 .portfolio-section .item-inner:hover img {
   -webkit-opacity: 0.9;
@@ -564,7 +564,7 @@ a.btn:hover {
   position: relative;
 }
 .portfolio-section .item-inner .content a {
-  color: #fff;
+  color: #607D8B;
 }
 .portfolio-section .item-inner .content .sub-title {
   font-size: 16px;
@@ -572,7 +572,7 @@ a.btn:hover {
   margin-bottom: 5px;
 }
 .portfolio-section .item-inner .content .meta {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(96, 125, 139, 0.8);
   font-size: 14px;
 }
 .portfolio-section .item-inner .content .action {
@@ -906,7 +906,7 @@ a.btn:hover {
 .lang-list a:last-child {
   border-right: 0;
 }
-.section .lang-title {
+.section .lang-titles {
   font-weight: bold;
   font-size: 1.5em;
   color: #666;
@@ -956,4 +956,8 @@ a.offsetAnchor {
 .section.lang-feature .row {
   /* Add some padding between the code blocks */
   padding-top: 5px;
+}
+
+.template {
+  display: none;
 }
