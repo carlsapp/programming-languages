@@ -488,11 +488,11 @@ int main() {
     <example>
       <lang name="JavaScript" link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes" />
       <code>
-Class ClassName extends BaseClassName {
+class ClassName extends BaseClassName {
     constructor(argOne) {
         this.myVarOne = argOne;
     }
-    function someMemberFunc() {
+    someMemberFunc() {
         this.myVarOne = "blah";
     }
 }
